@@ -1,9 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".RegisterActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/registrati"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="@string/e_ordina_quello_che_vuoi"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lay_nome"
+        android:layout_below="@+id/textView3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/imageView_name"
+                android:src="@drawable/ic_form_people"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo" />
+
+            <EditText
+                android:id="@+id/etRegName"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/nome"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#880E4F" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lay_email"
+        android:layout_below="@+id/lay_nome"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/imageView5"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_form_mail"
+                android:contentDescription="@string/todo" />
+
+            <EditText
+                android:id="@+id/etRegEmail"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/e_mail"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view_email"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#880E4F" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lay_password"
+        android:layout_below="@+id/lay_email"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                tools:layout_editor_absoluteY="267dp"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/imageView_pass"
+                android:src="@drawable/ic_form_lock"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="8dp"
+                android:contentDescription="@string/todo" />
+
+            <EditText
+                android:id="@+id/etRegPass"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view_pass"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#880E4F" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lay_passwordConfirm"
+        android:layout_below="@+id/lay_password"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                tools:layout_editor_absoluteY="267dp"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/imageView_passConf"
+                android:src="@drawable/ic_form_lock"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="8dp"
+                android:contentDescription="@string/todo" />
+
+            <EditText
+                android:id="@+id/etRegPassConf"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/conferma_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view_passconf"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#880E4F" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistrati"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/lay_passwordConfirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="btnRegistratiClick"
+        android:text="@string/registrati"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#FDFDFE"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRegistrati"
+        android:layout_alignStart="@+id/btnRegistrati"
+        android:layout_alignLeft="@+id/btnRegistrati"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/sei_gi_registrato"
+        android:textColor="#FDFDFE"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/btnRegistrati"
+        android:layout_alignRight="@+id/btnRegistrati"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="tvLoginClick"
+        android:text="@string/login"
+        android:textColor="#FDFDFE"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
