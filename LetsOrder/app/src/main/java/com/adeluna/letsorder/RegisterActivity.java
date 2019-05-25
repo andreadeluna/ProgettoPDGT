@@ -19,10 +19,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         Log.d("RegisterActivity", "TextView Login Click");
 
-        Intent intent2 = new Intent(this, LoginActivity.class);
+        Intent intent_login = new Intent(this, LoginActivity.class);
         finish();
 
-        startActivity(intent2);
+        startActivity(intent_login);
 
     }
 

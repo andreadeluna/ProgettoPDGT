@@ -19,10 +19,10 @@ public class LoginActivity extends AppCompatActivity {
 
         Log.d("LoginActivity", "Registrati Click");
 
-        Intent intent1 = new Intent(this, RegisterActivity.class);
+        Intent intent_register = new Intent(this, RegisterActivity.class);
         finish();
 
-        startActivity(intent1);
+        startActivity(intent_register);
 
     }
 

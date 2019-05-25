@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "199341103534",
+    "firebase_url": "https://letsorder-92b73.firebaseio.com",
+    "project_id": "letsorder-92b73",
+    "storage_bucket": "letsorder-92b73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199341103534:android:f229521667158f4b",
+        "android_client_info": {
+          "package_name": "com.adeluna.letsorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199341103534-18ael3f0dab4ui8shi6ar8plv3g6cpn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adeluna.letsorder",
+            "certificate_hash": "131088c17870c808be22677875883e7899ccb907"
+          }
+        },
+        {
+          "client_id": "199341103534-r4lv9uua2sv2uqbfbc9rdc2c3cjhdtns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9tvii5kErRXKtyZb79WIXMshdDhFtxK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199341103534-r4lv9uua2sv2uqbfbc9rdc2c3cjhdtns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
