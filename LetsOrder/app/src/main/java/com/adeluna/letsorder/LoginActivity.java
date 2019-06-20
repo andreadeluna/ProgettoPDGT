@@ -1,9 +1,9 @@
 package com.adeluna.letsorder;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -57,17 +57,12 @@ public class LoginActivity extends AppCompatActivity {
         if (user != null) {
 
             // Email address
-
             String email = user.getEmail();
 
-            Intent intent_main = new Intent(this, MainActivity.class);
-
-            // Passare il nome utente a MainAtivity con putExtra
-
-            intent_main.putExtra("msg", email);
             finish();
 
-            startActivity(intent_main);
+            // Passare il nome utente a MainAtivity con putExtra
+            startActivity(new Intent(this, MainActivity.class).putExtra("msg", email));
 
         }
 
@@ -80,8 +75,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Collegare le variabili ai Widgets
 
-        mNomeUtente = (EditText)findViewById(R.id.etRegName);
-        mPassword = (EditText)findViewById(R.id.etRegPass);
+        mNomeUtente = (EditText) findViewById(R.id.etRegName);
+        mPassword = (EditText) findViewById(R.id.etRegPass);
 
         String nomeUtente = mNomeUtente.getText().toString();
         String password = mPassword.getText().toString();
@@ -89,17 +84,15 @@ public class LoginActivity extends AppCompatActivity {
         Log.d("LoginActivity", nomeUtente);
         Log.d("LoginActivity", password);
 
-        if(!(nomeUtente.length() > 7) || !(nomeUtente.contains("@"))){
+        if (!(nomeUtente.length() > 7) || !(nomeUtente.contains("@"))) {
 
             Toast.makeText(this, "E-mail non valida", Toast.LENGTH_LONG).show();
 
-        }
-        else if(!(password.length() > 7)){
+        } else if (!(password.length() > 7)) {
 
             Toast.makeText(this, "Password non valida", Toast.LENGTH_LONG).show();
 
-        }
-        else{
+        } else {
 
             loginUser(nomeUtente, password);
 
@@ -136,11 +129,8 @@ public class LoginActivity extends AppCompatActivity {
     public void tvRegistratiClick(View view) {
 
         Log.d("LoginActivity", "Registrati Click");
-
-        Intent intent_register = new Intent(this, RegisterActivity.class);
         finish();
-
-        startActivity(intent_register);
+        startActivity(new Intent(this, RegisterActivity.class));
 
     }
 
