@@ -2,22 +2,23 @@ package com.adeluna.letsorder;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
 
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "LoginActivity1";
 
     //TODO: Definire a livello globale le variabili e le costanti
 
@@ -25,19 +26,20 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText mNomeUtente;
     EditText mPassword;
-
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText(R.string.title_activity_login);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         mAuth = FirebaseAuth.getInstance();
-
     }
-
 
     @Override
     public void onStart() {
@@ -71,56 +73,61 @@ public class LoginActivity extends AppCompatActivity {
 
     public void btnLoginClick(View view) {
 
-        Log.d("LoginActivity", "Login Button Click");
+        Log.d("LoginActivity1", "Login Button Click");
 
         // Collegare le variabili ai Widgets
 
-        mNomeUtente = (EditText) findViewById(R.id.etRegName);
-        mPassword = (EditText) findViewById(R.id.etRegPass);
+        mNomeUtente = findViewById(R.id.etRegName);
+        mPassword = findViewById(R.id.etRegPass);
 
         String nomeUtente = mNomeUtente.getText().toString();
         String password = mPassword.getText().toString();
 
-        Log.d("LoginActivity", nomeUtente);
-        Log.d("LoginActivity", password);
+        Log.d("LoginActivity1", nomeUtente);
+        Log.d("LoginActivity1", password);
 
         if (!(nomeUtente.length() > 7) || !(nomeUtente.contains("@"))) {
 
-            Toast.makeText(this, "E-mail non valida", Toast.LENGTH_LONG).show();
+            Snackbar snack = Snackbar.make(view, "E-mail non valida", Snackbar.LENGTH_LONG);
+            SnackbarHelper.configSnackbar(view.getContext(), snack);
+            snack.show();
 
         } else if (!(password.length() > 7)) {
 
-            Toast.makeText(this, "Password non valida", Toast.LENGTH_LONG).show();
+
+            Snackbar snack = Snackbar.make(view, "Password non valida", Snackbar.LENGTH_LONG);
+            SnackbarHelper.configSnackbar(view.getContext(), snack);
+            snack.show();
 
         } else {
 
-            loginUser(nomeUtente, password);
+            loginUser(nomeUtente, password, view);
 
         }
 
     }
 
 
-    private void loginUser(String email, String password) {
+    private void loginUser(String email, String password, View view) {
 
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(getApplicationContext(), "Autenticazione fallita.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "signInWithEmail:success");
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w(TAG, "signInWithEmail:failure", task.getException());
 
-                        // ...
+                        Snackbar snack = Snackbar.make(view, "Autenticazione fallita.", Snackbar.LENGTH_LONG);
+                        SnackbarHelper.configSnackbar(view.getContext(), snack);
+                        snack.show();
+
                     }
+
+                    // ...
                 });
 
     }
@@ -128,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void tvRegistratiClick(View view) {
 
-        Log.d("LoginActivity", "Registrati Click");
+        Log.d("LoginActivity1", "Registrati Click");
         finish();
         startActivity(new Intent(this, RegisterActivity.class));
 

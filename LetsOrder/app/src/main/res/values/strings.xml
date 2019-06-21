@@ -12,4 +12,5 @@
     <string name="e_mail">E-mail</string>
     <string name="non_sei_registrato">Non sei registrato?</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
