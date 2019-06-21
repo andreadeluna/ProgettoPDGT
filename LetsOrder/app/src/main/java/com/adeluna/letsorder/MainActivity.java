@@ -1,8 +1,8 @@
 package com.adeluna.letsorder;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        if(id == R.id.logoutItem){
+        if (id == R.id.logoutItem) {
 
             Log.i(TAG, "Logout selezionato");
 
@@ -72,13 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser == null){
-
-            Intent intToLogin = new Intent(this, LoginActivity.class);
+        if (currentUser == null) {
+            startActivity(new Intent(this, LoginActivity.class));
             finish();
-
-            startActivity(intToLogin);
-
         }
 
     }

@@ -2,21 +2,20 @@ package com.adeluna.letsorder;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -39,7 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        Toast.makeText(this, "Utente già loggato", Toast.LENGTH_SHORT).show();
+        if (currentUser != null)
+            Toast.makeText(this, "Utente già loggato", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -56,45 +56,39 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void initUI() {
 
-        mEmail = (EditText)findViewById(R.id.etRegEmail);
-        mPassword = (EditText)findViewById(R.id.etRegPass);
-        mConfermaPassword = (EditText)findViewById(R.id.etRegPassConf);
-        mNome = (EditText)findViewById(R.id.etRegName);
+        mEmail = findViewById(R.id.etRegEmail);
+        mPassword = findViewById(R.id.etRegPass);
+        mConfermaPassword = findViewById(R.id.etRegPassConf);
+        mNome = findViewById(R.id.etRegName);
 
     }
 
 
-    private void createFirebaseUser(String email, String password, final String nome){
+    private void createFirebaseUser(String email, String password, final String nome) {
 
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
 
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.i("ChatUPRegistration", "createUserWithEmail:success");
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.i("ChatUPRegistration", "createUserWithEmail:success");
 
-                            salvaNome();
+                        salvaNome();
 
-                            // Caricare nome in Firebase
-                            setNome(nome);
+                        // Caricare nome in Firebase
+                        setNome(nome);
 
-                            Intent intent_login = new Intent(RegisterActivity.this, LoginActivity.class);
-                            finish();   // Libera la memoria
-                            startActivity(intent_login);
+                        finish();   // Libera la memoria
+                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
 
-                        }
-                        else {
+                    } else {
 
-                            // If sign in fails, display a message to the user.
-                            Log.i("ChatUPRegistration", "createUserWithEmail:failure", task.getException());
+                        // If sign in fails, display a message to the user.
+                        Log.i("ChatUPRegistration", "createUserWithEmail:failure", task.getException());
 
-                            // Chiamare l'alert dialog
+                        // Chiamare l'alert dialog
 
-                            showDialog("Errore durante la registrazione", "Errore", android.R.drawable.ic_dialog_alert);
-
-                        }
+                        showDialog("Errore durante la registrazione", "Errore", android.R.drawable.ic_dialog_alert);
 
                     }
 
@@ -105,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // Salvare il campo nome all'interno delle SharedPreferences
 
-    private void salvaNome(){
+    private void salvaNome() {
 
         String nome = mNome.getText().toString();
 
@@ -117,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // Caricare nome in Firebase
 
-    private void setNome(String nome){
+    private void setNome(String nome) {
 
         FirebaseUser user = mAuth.getCurrentUser();
 
@@ -125,22 +119,18 @@ public class RegisterActivity extends AppCompatActivity {
                 .setDisplayName(nome)
                 .build();
 
-        user.updateProfile(changeRequest).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
+        user.updateProfile(changeRequest).addOnCompleteListener(task -> {
 
-                if(task.isSuccessful()){
+            if (task.isSuccessful()) {
 
-                    Log.i("setNome", "Nome caricato con successo");
+                Log.i("setNome", "Nome caricato con successo");
 
-                }
-                else{
+            } else {
 
-                    Log.i("setNome", "Errore nel caricamento del nome");
-
-                }
+                Log.i("setNome", "Errore nel caricamento del nome");
 
             }
+
         });
 
     }
@@ -148,7 +138,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // Creare un alert dialog da mostrare in caso di registration failed
 
-    private void showDialog(String message, String title, int icon){
+    private void showDialog(String message, String title, int icon) {
 
         new AlertDialog.Builder(this)
                 .setTitle(title)
@@ -171,22 +161,19 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Validazioni dati
 
-        if(!nomeValido(nome)){
+        if (!nomeValido(nome)) {
 
             Toast.makeText(getApplicationContext(), "Nome non valido", Toast.LENGTH_SHORT).show();
 
-        }
-        else if(!emailValida(email)) {
+        } else if (!emailValida(email)) {
 
             Toast.makeText(getApplicationContext(), "E-mail non valida", Toast.LENGTH_SHORT).show();
 
-        }
-        else if(!passwordValida(password)){
+        } else if (!passwordValida(password)) {
 
             Toast.makeText(getApplicationContext(), "Password non valida", Toast.LENGTH_SHORT).show();
 
-        }
-        else{
+        } else {
 
             createFirebaseUser(email, password, nome);
 
@@ -196,16 +183,15 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    private boolean nomeValido(String nome){
+    private boolean nomeValido(String nome) {
 
         boolean ret;
 
-        if(nome.length() > 3){
+        if (nome.length() > 3) {
 
             ret = true;
 
-        }
-        else {
+        } else {
 
             ret = false;
 
@@ -216,14 +202,16 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    private boolean emailValida(String email){
-
-        return email.contains("@");
-
+    private boolean emailValida(String email) {
+        String expression = "^[\\w\\.]+@([\\w]+\\.)+[A-Z]{2,7}$";
+        CharSequence inputString = email;
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputString);
+        return matcher.matches();
     }
 
 
-    private boolean passwordValida(String password){
+    private boolean passwordValida(String password) {
 
         String confermaPassword = mConfermaPassword.getText().toString();
         return confermaPassword.equals(password) && password.length() > 7;
@@ -235,11 +223,15 @@ public class RegisterActivity extends AppCompatActivity {
 
         Log.d("RegisterActivity", "TextView Login Click");
 
-        Intent intent_login = new Intent(this, LoginActivity.class);
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
 
-        startActivity(intent_login);
 
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        startActivity(new Intent(this, LoginActivity.class));
+    }
 }

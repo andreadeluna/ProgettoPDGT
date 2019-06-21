@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/backgroundColor"
     tools:context=".RegisterActivity">
 
     <TextView
@@ -31,27 +31,27 @@
         android:textSize="18sp" />
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/lay_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_height="30dp"
-                android:layout_width="30dp"
                 android:id="@+id/imageView_name"
-                android:src="@drawable/ic_form_people"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/todo" />
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_form_people" />
 
             <EditText
                 android:id="@+id/etRegName"
@@ -68,10 +68,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <View
                 android:id="@+id/view"
@@ -85,27 +85,27 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/lay_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/lay_nome"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_height="30dp"
-                android:layout_width="30dp"
                 android:id="@+id/imageView5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_form_mail"
-                android:contentDescription="@string/todo" />
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/ic_form_mail" />
 
             <EditText
                 android:id="@+id/etRegEmail"
@@ -122,10 +122,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <View
                 android:id="@+id/view_email"
@@ -139,29 +139,29 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/lay_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/lay_email"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                tools:layout_editor_absoluteY="267dp"
-                android:layout_height="30dp"
-                android:layout_width="30dp"
                 android:id="@+id/imageView_pass"
-                android:src="@drawable/ic_form_lock"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_form_lock"
                 tools:layout_editor_absoluteX="8dp"
-                android:contentDescription="@string/todo" />
+                tools:layout_editor_absoluteY="267dp" />
 
             <EditText
                 android:id="@+id/etRegPass"
@@ -178,10 +178,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <View
                 android:id="@+id/view_pass"
@@ -195,29 +195,29 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/lay_passwordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/lay_password"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                tools:layout_editor_absoluteY="267dp"
-                android:layout_height="30dp"
-                android:layout_width="30dp"
                 android:id="@+id/imageView_passConf"
-                android:src="@drawable/ic_form_lock"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_form_lock"
                 tools:layout_editor_absoluteX="8dp"
-                android:contentDescription="@string/todo" />
+                tools:layout_editor_absoluteY="267dp" />
 
             <EditText
                 android:id="@+id/etRegPassConf"
@@ -234,10 +234,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <View
                 android:id="@+id/view_passconf"
