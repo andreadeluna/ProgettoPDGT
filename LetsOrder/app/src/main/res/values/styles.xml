@@ -14,4 +14,18 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorAccent">@color/colorText</item>
+        <item name="colorControlNormal">@color/colorText</item>
+        <item name="colorControlActivated">@color/colorText</item>
+        <item name="colorControlHighlight">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorText</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="helperTextTextAppearance">@color/colorText</item>
+    </style>
+
 </resources>

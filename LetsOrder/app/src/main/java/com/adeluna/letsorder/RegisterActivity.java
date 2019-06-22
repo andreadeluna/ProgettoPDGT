@@ -3,35 +3,37 @@ package com.adeluna.letsorder;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
+
 
     // Costanti
 
     static final String CHAT_PREFS = "ChatPrefs";
     static final String NOME_KEY = "username";
 
-    EditText mConfermaPassword;
-    EditText mEmail;
-    EditText mPassword;
-    EditText mNome;
-
-
+    EditText mConfermaPassword, mEmail, mPassword, mNome;
+    Button btnRegistrati;
+    TextView tvLogin;
     private FirebaseAuth mAuth;
-
 
     @Override
     public void onStart() {
@@ -47,10 +49,64 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         initUI();
 
         mAuth = FirebaseAuth.getInstance();
+
+
+        btnRegistrati.setOnClickListener(v -> {
+
+            Log.d("RegisterActivity", "Button Registrati Click");
+
+            String nome = mNome.getText().toString();
+            String email = mEmail.getText().toString();
+            String password = mPassword.getText().toString();
+
+            // Validazioni dati
+
+            if (!nomeValido(nome)) {
+
+
+                Snackbar snack = Snackbar.make(v, "Nome non valido", Snackbar.LENGTH_LONG);
+                SnackbarHelper.configSnackbar(v.getContext(), snack);
+                snack.show();
+
+            } else if (!emailValida(email)) {
+
+
+                Snackbar snack = Snackbar.make(v, "E-mail non valida", Snackbar.LENGTH_LONG);
+                SnackbarHelper.configSnackbar(v.getContext(), snack);
+                snack.show();
+
+            } else if (!passwordValida(password)) {
+
+
+                Snackbar snack = Snackbar.make(v, "Password non valida", Snackbar.LENGTH_LONG);
+                SnackbarHelper.configSnackbar(v.getContext(), snack);
+                snack.show();
+
+            } else {
+
+                createFirebaseUser(email, password, nome);
+
+            }
+
+
+        });
+
+
+        tvLogin.setOnClickListener(v -> {
+
+            Log.d("RegisterActivity", "TextView Login Click");
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            finish();
+
+
+        });
     }
 
 
@@ -60,7 +116,8 @@ public class RegisterActivity extends AppCompatActivity {
         mPassword = findViewById(R.id.etRegPass);
         mConfermaPassword = findViewById(R.id.etRegPassConf);
         mNome = findViewById(R.id.etRegName);
-
+        btnRegistrati = findViewById(R.id.btnRegistrati);
+        tvLogin = findViewById(R.id.tvLogin);
     }
 
 
@@ -151,51 +208,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    public void btnRegistratiClick(View view) {
-
-        Log.d("RegisterActivity", "Button Registrati Click");
-
-        String nome = mNome.getText().toString();
-        String email = mEmail.getText().toString();
-        String password = mPassword.getText().toString();
-
-        // Validazioni dati
-
-        if (!nomeValido(nome)) {
-
-            Toast.makeText(getApplicationContext(), "Nome non valido", Toast.LENGTH_SHORT).show();
-
-        } else if (!emailValida(email)) {
-
-            Toast.makeText(getApplicationContext(), "E-mail non valida", Toast.LENGTH_SHORT).show();
-
-        } else if (!passwordValida(password)) {
-
-            Toast.makeText(getApplicationContext(), "Password non valida", Toast.LENGTH_SHORT).show();
-
-        } else {
-
-            createFirebaseUser(email, password, nome);
-
-        }
-
-
-    }
-
-
     private boolean nomeValido(String nome) {
 
         boolean ret;
 
-        if (nome.length() > 3) {
-
-            ret = true;
-
-        } else {
-
-            ret = false;
-
-        }
+        ret = nome.length() > 3;
 
         return ret;
 
@@ -219,19 +236,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    public void tvLoginClick(View view) {
-
-        Log.d("RegisterActivity", "TextView Login Click");
-
-        startActivity(new Intent(this, LoginActivity.class));
-        finish();
-
-
-    }
-
     @Override
     public void onBackPressed() {
         finish();
         startActivity(new Intent(this, LoginActivity.class));
     }
+
+
 }
