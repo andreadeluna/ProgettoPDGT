@@ -38,8 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        TextView mTitle = toolbar.findViewById(R.id.toolbar_title);
-        mTitle.setText(R.string.title_activity_login);
+
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         initUI();
