@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Ristorante> ristoranti;
     RistorantiAdapter adapter;
 
+    EditText et_luogo;
+    Button btn_cerca;
+
     private static final String TAG = "MainActivity";
 
     private FirebaseAuth mAuth;
@@ -52,16 +57,26 @@ public class MainActivity extends AppCompatActivity {
         // Write a message to the database
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
+        et_luogo = findViewById(R.id.et_luogo);
+        btn_cerca = findViewById(R.id.btn_cerca);
 
-        ristoranti = new ArrayList<Ristorante>();
-        ListView listView = (ListView)findViewById(R.id.lst_ristoranti);
 
-        DownloadTask task = new DownloadTask();
+        btn_cerca.setOnClickListener(b -> {
 
-        task.execute("https://letsorderapi.herokuapp.com/?tipo=luogo&lista=rimini");
+            ristoranti = new ArrayList<Ristorante>();
+            ListView listView = (ListView) findViewById(R.id.lst_ristoranti);
 
-        adapter = new RistorantiAdapter(getApplicationContext(),R.layout.item_ristorante, ristoranti);
-        listView.setAdapter(adapter);
+            DownloadTask task = new DownloadTask();
+
+            String luogo = et_luogo.getText().toString();
+
+            task.execute("https://letsorderapi.herokuapp.com/?tipo=luogo&lista=" + luogo);
+
+            adapter = new RistorantiAdapter(getApplicationContext(), R.layout.item_ristorante, ristoranti);
+            listView.setAdapter(adapter);
+
+        });
+
 
     }
 
@@ -123,14 +138,16 @@ public class MainActivity extends AppCompatActivity {
                     String nomeRist = jsonPart.getString("nome");
                     String indirizzoRist = jsonPart.getString("indirizzo");
                     String aperturaRist = jsonPart.getString("apertura");
+                    String postiRist = jsonPart.getString("posti liberi");
 
                     rist.setNome(nomeRist);
                     rist.setIndirizzo(indirizzoRist);
                     rist.setApertura(aperturaRist);
+                    rist.setPosti("Posti liberi: " + postiRist);
 
                     ristoranti.add(rist);
 
-                    Log.i("JSONDemo", nomeRist + " " + indirizzoRist + " " + aperturaRist);
+                    Log.i("JSONDemo", nomeRist + " " + indirizzoRist + " " + aperturaRist + " " + postiRist);
                 }
 
 

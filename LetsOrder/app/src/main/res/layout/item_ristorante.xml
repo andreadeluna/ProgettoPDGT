@@ -19,9 +19,22 @@
         android:layout_height="wrap_content"
         android:text="Indirizzo" />
 
-    <TextView
-        android:id="@+id/tv_apertura"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apertura" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_apertura"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Apertura" />
+
+        <TextView
+            android:id="@+id/tv_posti"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Posti Liberi" />
+    </LinearLayout>
+
 </LinearLayout>

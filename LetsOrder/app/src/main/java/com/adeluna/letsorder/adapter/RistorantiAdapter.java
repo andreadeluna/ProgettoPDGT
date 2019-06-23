@@ -36,6 +36,7 @@ public class RistorantiAdapter  extends ArrayAdapter<Ristorante> {
         TextView nome;
         TextView indirizzo;
         TextView apertura;
+        TextView posti_liberi;
     }
 
     @NonNull
@@ -50,6 +51,7 @@ public class RistorantiAdapter  extends ArrayAdapter<Ristorante> {
             viewHolder.nome = (TextView)convertView.findViewById(R.id.tv_nome);
             viewHolder.indirizzo = (TextView)convertView.findViewById(R.id.tv_indirizzo);
             viewHolder.apertura = (TextView)convertView.findViewById(R.id.tv_apertura);
+            viewHolder.posti_liberi = (TextView)convertView.findViewById(R.id.tv_posti);
 
             convertView.setTag(viewHolder);
         }else{
@@ -59,6 +61,7 @@ public class RistorantiAdapter  extends ArrayAdapter<Ristorante> {
         viewHolder.nome.setText(ristoranti.get(position).getNome());
         viewHolder.indirizzo.setText(ristoranti.get(position).getIndirizzo());
         viewHolder.apertura.setText(ristoranti.get(position).getApertura());
+        viewHolder.posti_liberi.setText(ristoranti.get(position).getPosti());
 
 
         return convertView;

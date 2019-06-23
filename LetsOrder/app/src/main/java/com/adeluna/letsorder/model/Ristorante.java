@@ -8,11 +8,14 @@ public class Ristorante {
     private String nome;
     private String indirizzo;
     private String apertura;
+    private String posti_liberi;
 
 
-    public Ristorante(String nome, String indirizzo){
+    public Ristorante(String nome, String indirizzo, String apertura, String posti_liberi){
         this.nome = nome;
         this.indirizzo = indirizzo;
+        this.apertura = apertura;
+        this.posti_liberi = posti_liberi;
     }
 
 
@@ -50,6 +53,14 @@ public class Ristorante {
 
     public void setApertura(String apertura) {
         this.apertura = apertura;
+    }
+
+    public String getPosti() {
+        return posti_liberi;
+    }
+
+    public void setPosti(String posti_liberi) {
+        this.posti_liberi = posti_liberi;
     }
 
 }
