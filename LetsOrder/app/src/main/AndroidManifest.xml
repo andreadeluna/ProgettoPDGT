@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".RistoranteDatiActivity"></activity>
+        <activity android:name=".PrenotazioneActivity"></activity>
+        <activity android:name=".RistoranteDatiActivity" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
