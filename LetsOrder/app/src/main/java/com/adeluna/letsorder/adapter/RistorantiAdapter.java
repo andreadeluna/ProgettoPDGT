@@ -14,7 +14,7 @@ import com.adeluna.letsorder.model.Ristorante;
 
 import java.util.ArrayList;
 
-public class RistorantiAdapter  extends ArrayAdapter<Ristorante> {
+public class RistorantiAdapter extends ArrayAdapter<Ristorante> {
 
     private ArrayList<Ristorante> ristoranti;
     private LayoutInflater inflater;

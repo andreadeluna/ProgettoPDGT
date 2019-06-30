@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -70,10 +73,24 @@ public class MainActivity extends AppCompatActivity {
 
             String luogo = et_luogo.getText().toString();
 
-            task.execute("https://letsorderapi.herokuapp.com/?tipo=luogo&lista=" + luogo);
+            task.execute("https://letsorderapi.glitch.me/?tipo=luogo&lista=" + luogo);
 
             adapter = new RistorantiAdapter(getApplicationContext(), R.layout.item_ristorante, ristoranti);
             listView.setAdapter(adapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    String nome = (String) ((TextView) view.findViewById(R.id.tv_nome)).getText();
+                    Intent intent = new Intent(MainActivity.this, RistoranteDatiActivity.class);
+                    intent.putExtra("nome", nome);
+                    intent.putExtra("luogo", luogo);
+                    finish();
+                    startActivity(intent);
+
+                }
+            });
 
         });
 

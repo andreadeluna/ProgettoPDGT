@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PrenotazioneActivity"></activity>
+        <activity android:name=".RiepilogoActivity"></activity>
+        <activity android:name=".PrenotazioneActivity" />
         <activity android:name=".RistoranteDatiActivity" />
         <activity
             android:name=".RegisterActivity"

@@ -11,13 +11,16 @@
         android:layout_height="wrap_content"
         android:text="Nome"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="24sp" />
+        android:textColor="#2D2F31"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/tv_indirizzo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Indirizzo" />
+        android:text="Indirizzo"
+        android:textColor="#2D2F31"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,13 +31,19 @@
             android:id="@+id/tv_apertura"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Apertura" />
+            android:layout_weight="1"
+            android:text="Apertura"
+            android:textColor="#2D2F31"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_posti"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Posti Liberi" />
+            android:layout_weight="1"
+            android:text="Posti Liberi"
+            android:textColor="#2D2F31"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>
