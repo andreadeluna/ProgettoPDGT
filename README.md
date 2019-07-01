@@ -38,6 +38,8 @@ L'API permetterà anche di esporre un metodo POST, in modo da determinare (in mo
 L'API permetterà inizialmente, a seguito dell'inserimento della posizione da parte dell'utente, di acquisire i dati dei ristoranti dall'API Places di Google effettuando una richiesta HTTP per accedere ai dati, effettuare il parsing dei dati ricevuti, manipolare i dati ed inserirli in una apposita struttura sottoforma di JSON e relativamente restituirla per permetterne la visualizzazione.
 A seguito di un controllo sugli orari del ristorante, l'API definirà automaticamente se il ristorante risulta essere aperto o chiuso e, nel caso in cui sia chiuso, porrà i posti disponibili a 0, nel caso invece in cui il ristorante sia aperto, porrà i posti disponibili ad un numero casuale compreso tra 0 e 50.
 
+<a><img src='img/array_luogo.png' height='250' align="center"/></a> 
+
 ------------------------------------
 
 ### Let's Order Bot ###
@@ -64,7 +66,6 @@ L'ordinazione, acquisita mediante input da parte dell'utente, viene acquisita e 
 
 A seguito dell'operazione di ordinazione, verrà visualizzato un riepilogo, per verificare che i dati siano stati acquisiti correttamente.
 
-<a><img src='img/ordinazione.png' height='250' align="right"/></a> 
 
 ----------------------------------------------------------
 ### Links e riferimenti ###
