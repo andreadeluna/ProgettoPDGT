@@ -28,7 +28,7 @@ Gli obiettivi principali del progetto "Let's Order!" sono:
 Il progetto è composto da 3 sezioni principali, ossia la realizzazione di un'API in NodeJS, al fine di realizzare un'operazione di GET sul database dei ristoranti dell'API Places di Google, l'implementazione di un bot Telegram in Python, al fine di ricercare i ristoranti nelle vicinanze, visualizzarne i dati e le relative recensioni rilasciate dai clienti, e l'implementazione di un'applicazione Android in XML e Java, al fine di cercare i ristoranti, prenotare e ordinare i Piatti direttamente dal proprio smartphone mediante un metodo di POST, direttamente collegato al Realtime DataBase di "Let's Order!".
 Si è scelto appositamente di sviluppare sia l'App che il Bot in quanto complementari, dato che le operazioni svolte su entrambe sono ad ogni modo appunto complementari. Infatti, il Bot permetterà di visualizzare esclusivamente le informazioni e le recensioni dei ristoranti, mentre l'App permetterà esclusivamente di prenotare e ordinare.
 
-<div align="center"><a><img src='img/schema.png' height='400' alt='icon'/></a></div>
+<div align="center"><a><img src='img/schema.png' height='600' alt='icon'/></a></div>
 
 -----------------------------------------------------
 

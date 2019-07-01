@@ -10,28 +10,28 @@ Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Splashsreen
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/splashscreen.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/splashscreen.png' height='400' alt='icon'/></a></div>
 
 ## Registrazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/registrazione.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/registrazione.png' height='400' alt='icon'/></a></div>
 
 ## Login
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/login.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/login.png' height='400' alt='icon'/></a></div>
 
 ## Ricerca e lista ristoranti
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/lista_ristoranti.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/lista_ristoranti.png' height='400' alt='icon'/></a></div>
 
 ## Prenotazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/prenotazione.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/prenotazione.png' height='400' alt='icon'/></a></div>
 
 ## Ordinazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ordinazione.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ordinazione.png' height='400' alt='icon'/></a></div>
 
 ## Riepilogo
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo.png' height='400' alt='icon'/></a></div>

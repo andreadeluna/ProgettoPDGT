@@ -10,4 +10,4 @@ Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Array Ristorante
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/array_luogo.png' height='400' alt='icon'/></a>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/array_luogo.png' height='400' alt='icon'/></a></div>
