@@ -14,24 +14,24 @@ Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Registrazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/registrazione.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/registrazione.png' height='400' alt='icon' align="center"/></a>
 
 ## Login
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/login.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/login.png' height='400' alt='icon' align="center"/></a>
 
 ## Ricerca e lista ristoranti
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/lista_ristoranti.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/lista_ristoranti.png' height='400' alt='icon' align="center"/></a>
 
 ## Prenotazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/prenotazione.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/prenotazione.png' height='400' alt='icon' align="center"/></a>
 
 ## Ordinazione
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ordinazione.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ordinazione.png' height='400' alt='icon' align="center"/></a>
 
 ## Riepilogo
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo.png' height='400' alt='icon' align="center"/></a>

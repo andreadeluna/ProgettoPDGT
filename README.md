@@ -41,6 +41,8 @@ A seguito di un controllo sugli orari del ristorante, l'API definirà automatica
 ------------------------------------
 
 ### Let's Order Bot ###
+<div> 
+<a><img src='img/bot_cerca.png' height='250' align="left"/></a> 
 Let's Order Bot è un semplice bot che permette di cercare, mediante l'inserimento di una determinata posizione da parte dell'utente, una lista di ristoranti presenti nelle vicinanze. A seguito della ricerca e della presentazione dei ristoranti, l'utente sceglierà il ristorante da lui desiderato per visualizzarne le informazioni. Nel caso in cui all'interno della lista non sia presente un ristorante di suo gradimento,l'utente potrà cercare il ristorante inserendone direttamente il nome. 
 A seguito della visualizzazione delle informazioni, composte da nome, posizione, valutazione e orari, l'utente avrà la possibilità di visualizzare una lista di Recensioni (recuperate da Google) rilasciate da clienti che sono già stati nel suddetto ristorante.
 Il bot è stato realizzato utilizzando la libreria <a href="https://github.com/nickoala/telepot">Telepot</a>, e si interfaccia all'API di Let'Order, precedentemente caricata su Heroku.
@@ -48,6 +50,8 @@ Il bot è stato realizzato utilizzando la libreria <a href="https://github.com/n
 ----------------------------------------------------------
 
 ### Let's Order App ###
+<div> 
+<a><img src='img/login.png' height='250' align="left"/></a> 
 L'App "Let's Order!" è una semplice App Android che permette di cercare un determinato ristorante ed effettuare una prenotazione, con conseguente ordinazione dal menù. L'App, direttamente collegata con Firebase, permette all'utente di registrarsi ed effettuare il login e, a seguito di una ricerca, selezionare un ristorante da lui desiderato ed interagire con esso effettuando una prenotazione, mediante un metodo di POST direttamente sul Realtime DataBase in Firebase dell'Applicazione.
 L'ordinazione, acquisita mediante input da parte dell'utente, viene acquisita e inserita all'interno del DataBase sottoforma di una struttura JSON, organizzata appositamente per utente e contenente i dati della prenotazione e relativamente dell'ordinazione, ossia:
     * Nome
@@ -57,6 +61,8 @@ L'ordinazione, acquisita mediante input da parte dell'utente, viene acquisita e 
     * Contorno
 
 A seguito dell'operazione di ordinazione, verrà visualizzato un riepilogo, per verificare che i dati siano stati acquisiti correttamente.
+
+<a><img src='img/ordinazione.png' height='250' align="right"/></a> 
 
 ----------------------------------------------------------
 ### Links e riferimenti ###

@@ -10,16 +10,16 @@ Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Messaggio Iniziale
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/descrizione_bot.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/descrizione_bot.png' height='400' alt='icon' align="center"/></a>
 
 ## Ricerca Ristorante
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/bot_cerca.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/bot_cerca.png' height='400' alt='icon' align="center"/></a>
 
 ## Dati Ristorante
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ristorante_bot.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ristorante_bot.png' height='400' alt='icon' align="center"/></a>
 
 ## Recensioni Google del Ristorante
 
-<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_bot.png' height='400' alt='icon'/></a>
+<a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_bot.png' height='400' alt='icon' align="center"/></a>
