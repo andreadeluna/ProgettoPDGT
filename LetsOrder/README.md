@@ -7,23 +7,31 @@ Semplice App Android per la ricerca di ristoranti in un determinato luogo e rela
 Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Screenshots
-* Splashsreen
+
+# Splashsreen
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/splashscreen.png' height='400' alt='icon'/></a>
 
-* Registrazione
+# Registrazione
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/registrazione.png' height='400' alt='icon'/></a>
 
-* Login
+# Login
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/login.png' height='400' alt='icon'/></a>
 
-* Ricerca e lista ristoranti
+# Ricerca e lista ristoranti
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/lista_ristoranti.png' height='400' alt='icon'/></a>
 
-* Prenotazione
+# Prenotazione
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/prenotazione.png' height='400' alt='icon'/></a>
 
-* Ordinazione
+# Ordinazione
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/ordinazione.png' height='400' alt='icon'/></a>
 
-* Riepilogo
+# Riepilogo
+
 <a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo.png' height='400' alt='icon'/></a>
