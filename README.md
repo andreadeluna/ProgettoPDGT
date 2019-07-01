@@ -60,7 +60,7 @@ A seguito dell'operazione di ordinazione, verrà visualizzato un riepilogo, per 
 
 ----------------------------------------------------------
 ### Links e riferimenti ###
-* Link API lista ristoranti Urbino (esempio): 
+* Link API lista ristoranti Urbino (esempio):\n
     *https://letsorderapi.herokuapp.com/?tipo=luogo&lista=rimini
     *https://letsorderapi.glitch.me/?tipo=diretto&lista=lapiazzettamisano
 * Link alla documentazione dell'API: https://app.swaggerhub.com/apis/andreadeluna/LetsOrder/1.0.0
