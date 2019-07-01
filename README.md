@@ -28,6 +28,8 @@ Gli obiettivi principali del progetto "Let's Order!" sono:
 Il progetto è composto da 3 sezioni principali, ossia la realizzazione di un'API in NodeJS, al fine di realizzare un'operazione di GET sul database dei ristoranti dell'API Places di Google, l'implementazione di un bot Telegram in Python, al fine di ricercare i ristoranti nelle vicinanze, visualizzarne i dati e le relative recensioni rilasciate dai clienti, e l'implementazione di un'applicazione Android in XML e Java, al fine di cercare i ristoranti, prenotare e ordinare i Piatti direttamente dal proprio smartphone mediante un metodo di POST, direttamente collegato al Realtime DataBase di "Let's Order!".
 Si è scelto appositamente di sviluppare sia l'App che il Bot in quanto complementari, dato che le operazioni svolte su entrambe sono ad ogni modo appunto complementari. Infatti, il Bot permetterà di visualizzare esclusivamente le informazioni e le recensioni dei ristoranti, mentre l'App permetterà esclusivamente di prenotare e ordinare.
 
+<div align="center"><a><img src='img/schema.png' height='400' alt='icon'/></a></div>
+
 -----------------------------------------------------
 
 ### Let's Order API ###
@@ -38,7 +40,7 @@ L'API permetterà anche di esporre un metodo POST, in modo da determinare (in mo
 L'API permetterà inizialmente, a seguito dell'inserimento della posizione da parte dell'utente, di acquisire i dati dei ristoranti dall'API Places di Google effettuando una richiesta HTTP per accedere ai dati, effettuare il parsing dei dati ricevuti, manipolare i dati ed inserirli in una apposita struttura sottoforma di JSON e relativamente restituirla per permetterne la visualizzazione.
 A seguito di un controllo sugli orari del ristorante, l'API definirà automaticamente se il ristorante risulta essere aperto o chiuso e, nel caso in cui sia chiuso, porrà i posti disponibili a 0, nel caso invece in cui il ristorante sia aperto, porrà i posti disponibili ad un numero casuale compreso tra 0 e 50.
 
-<a><img src='img/array_luogo.png' height='250' align="center"/></a> 
+<a><img src='img/array_luogo.png' height='400' align="center"/></a> 
 
 ------------------------------------
 
