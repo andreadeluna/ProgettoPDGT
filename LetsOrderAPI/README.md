@@ -15,7 +15,7 @@ Nel caso in cui l'utente richieda la connessione diretta al ristorante, l'array 
 
     Cercando il ristorante tramite luogo, sarà possibile all'utente visualizzare una lista di ristoranti presenti nel luogo da lui inserito, visionando così i dati di base quali id, nome, indirizzo, apertura, posti liberi e valutazione.
 
-<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/array_luogo.png' height='400' alt='icon'/></a></div>
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/array_luogo.png' height='150' alt='icon'/></a></div>
 
 - Ricerca tramite nome del ristorante
 
@@ -23,20 +23,20 @@ Nel caso in cui l'utente richieda la connessione diretta al ristorante, l'array 
 
     * Dati ristorante
 
-    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/dati_ristorante.png' height='200' alt='icon'/></a></div>
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/dati_ristorante.png' height='150' alt='icon'/></a></div>
 
 
     * Menù
 
-    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/menu_ristorante.png' height='200' alt='icon'/></a></div>
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/menu_ristorante.png' height='150' alt='icon'/></a></div>
 
 
     * Orari
 
-    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/orari_ristorante.png' height='200' alt='icon'/></a></div>
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/orari_ristorante.png' height='150' alt='icon'/></a></div>
 
 
     * Feedback
 
-    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_ristorante.png' height='200' alt='icon'/></a></div>
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_ristorante.png' height='150' alt='icon'/></a></div>
 
