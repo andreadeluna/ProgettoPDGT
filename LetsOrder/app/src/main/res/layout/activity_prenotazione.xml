@@ -316,7 +316,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:onClick="inviaMessaggio"
+                android:onClick="send"
                 android:text="Ordina" />
 
             <TextView

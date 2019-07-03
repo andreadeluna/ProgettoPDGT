@@ -67,9 +67,11 @@ public class RistoranteDatiActivity extends AppCompatActivity {
 
     public void prenotazioneRist(View view){
 
-        //finish();
-        startActivity(new Intent(RistoranteDatiActivity.this, PrenotazioneActivity.class));
-
+        Intent intent = new Intent(RistoranteDatiActivity.this, PrenotazioneActivity.class);
+        intent.putExtra("nome", nome);
+        intent.putExtra("luogo", luogo);
+        finish();
+        startActivity(intent);
     }
 
 
