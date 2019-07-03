@@ -2,6 +2,7 @@
 
 # Let's Order!
 Semplice App Android per la ricerca di ristoranti in un determinato luogo e relativa visualizzazione delle informazioni di base, con la possibilità di prenotare un posto ed effettuare un'ordinazione dal menù per il pranzo o la cena!
+L'Applicazione permette il salvataggio, in contemporanea, dell'ordinazione sia su Firebase che direttamente nell'API mediante un metodo di POST interno.
 
 # Licenza
 Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html

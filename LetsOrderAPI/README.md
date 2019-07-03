@@ -9,6 +9,7 @@ Con licenza GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
 # Descrizione
 Per quanto riguarda l'Array di elementi contenenti i ristoranti, esso presenterà due varianti a seconda di come viene effettuata la ricerca. Il ristorante verrà autenticato e identificato mediante un codice ID univoco, generato all'atto di creazione dell'Array durante il parsing dei dati. Quindi, nel caso in cui si voglia effettuare un'autenticazione lato server per accedere ai dati e alle ordinazioni di ogni ristorante, sarà sufficiente fruire di tale ID identicativo.
 Nel caso in cui l'utente richieda la connessione diretta al ristorante, l'array conterrà anche il menù dello stesso, in modo da permetterne l'acquisizione da parte dell'Applicazione, per permettere così di effettuare l'ordinazione e la prenotazione.
+L'API permette anche la visualizzazione delle ordinazioni degli utenti, rilevate mediante applicazione.
 
 # Metodi
 - Ricerca tramite luogo:
@@ -39,4 +40,10 @@ Nel caso in cui l'utente richieda la connessione diretta al ristorante, l'array 
     * Feedback
 
     <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_ristorante.png' height='150' alt='icon'/></a></div>
+
+
+
+# API a seguito dell'ordinazione da parte di un utente
+
+<div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/riepilogo_ordinazione.png' height='150' alt='icon'/></a></div>
 
