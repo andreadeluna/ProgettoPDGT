@@ -23,12 +23,20 @@ Nel caso in cui l'utente richieda la connessione diretta al ristorante, l'array 
 
     * Dati ristorante
 
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/dati_ristorante.png' height='400' alt='icon'/></a></div>
+
 
     * Menù
+
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/menu_ristorante.png' height='400' alt='icon'/></a></div>
 
 
     * Orari
 
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/orari_ristorante.png' height='400' alt='icon'/></a></div>
+
 
     * Feedback
+
+    <div align="center"><a><img src='https://raw.githubusercontent.com/andreadeluna/ProgettoPDGT/master/img/recensioni_ristorante.png' height='400' alt='icon'/></a></div>
 
